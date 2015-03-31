@@ -27,7 +27,7 @@ current_position = [0,0]
 heading = [1,90] - 1 step North
 		  [1, -90] - 1 step South
 		  [1,0] - East
-		  [1,360] - West
+		  [1,+-180] - West
 '''
 
 heading = [1,0]
