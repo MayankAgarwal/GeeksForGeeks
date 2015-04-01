@@ -3,6 +3,8 @@ Problem : Find the minimum element in a rotated sorted array
 Technique: Binary search
 Runtime: O(logn)
 
+Handles duplicate entries as well except special cases such as {2,2,2,0,2} etc.
+
 URL: http://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
 '''
 
@@ -16,10 +18,10 @@ def find_min (arr, first, mid, last, length):
     if first > last:
         return arr[0]
     
-    if arr[first] < arr[mid] or first == mid:
+    if arr[first] <= arr[mid]:
         first = mid + 1
 
-    elif arr[mid] < arr[last] or mid == last:
+    elif arr[mid] <= arr[last]:
         last = mid - 1
 
     mid = int( (first + last)/2 )
